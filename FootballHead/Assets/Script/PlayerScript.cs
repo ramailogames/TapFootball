@@ -27,8 +27,12 @@ public class PlayerScript : MonoBehaviour
     public float BallCheckRadius;
     public LayerMask whatIsBall;
     public Transform checkBallPos;
-    bool isTouchingBall;
+    
 
+    [Header("Check Ball - Auto")]
+    public Transform checkBallPosAuto;
+    public float checkBallRadiusAuto;
+    bool isTouchingBall;
 
     private void Awake()
     {
@@ -38,6 +42,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Update()
     {
+        CheckBall();
         CheckInput();
         CheckIfCanJump();
         CheckSurroundings();
@@ -47,7 +52,7 @@ public class PlayerScript : MonoBehaviour
     void CheckInput()
     {
         Jump();
-        KickInput();
+        //KickInput();
     }
     void KickInput()
     {
@@ -57,6 +62,15 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    void CheckBall()
+    {
+        isTouchingBall = Physics2D.OverlapCircle(checkBallPosAuto.position, checkBallRadiusAuto, whatIsBall);
+
+        if (isTouchingBall)
+        {
+            anim.SetTrigger("kick");
+        }
+    }
     public void KickBall()
     {
         //isTouchingBall = Physics2D.OverlapCircle(checkBallPos.position, BallCheckRadius, whatIsBall);
@@ -131,5 +145,8 @@ public class PlayerScript : MonoBehaviour
         }
 
         Gizmos.DrawWireSphere(checkBallPos.position, BallCheckRadius);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(checkBallPosAuto.position, checkBallRadiusAuto);
     }
 }

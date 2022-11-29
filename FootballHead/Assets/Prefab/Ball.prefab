@@ -101,8 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd4dd574c4da5e47bfe748892e96bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kickForce: 800
+  kickForce: 700
   ballGfx: {fileID: 8048671284467211264}
+  goalVfx: {fileID: 5504537296522836245, guid: dae7018a367af62478db33bd6ffea0d3, type: 3}
 --- !u!1 &6899999797011701852
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,5 +201,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c790c78ea27ab4fb5775fe05f56096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  y: 2
+  y: 5
   rotate: 0
