@@ -79,7 +79,7 @@ public class PlayerScript : MonoBehaviour
 
         if(isTouchingBall_ != null)
         {
-            isTouchingBall_.GetComponent<BallScript>().TakeKick(facingDir);
+            isTouchingBall_.GetComponent<BallScript>().TakeKick(facingDir, !isGrounded);
         }
     }
 
@@ -91,6 +91,14 @@ public class PlayerScript : MonoBehaviour
 
     private void Jump()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (!canJump)
+            {
+                return;
+            }
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
        
         if (Input.GetKeyDown(KeyCode.Space))
         {

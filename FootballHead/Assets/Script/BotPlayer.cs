@@ -42,7 +42,7 @@ public class BotPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Voke_Jump", jumpStartDelay, jumpRepeatDelay);
+        //InvokeRepeating("Voke_Jump", jumpStartDelay, jumpRepeatDelay);
     }
 
     // Update is called once per frame
@@ -108,7 +108,7 @@ public class BotPlayer : MonoBehaviour
 
         if(isTouchingBall_ != null)
         {
-            isTouchingBall_.GetComponent<BallScript>().TakeKick(facingDir);
+            isTouchingBall_.GetComponent<BallScript>().TakeKick(facingDir, false);
         }
     }
 

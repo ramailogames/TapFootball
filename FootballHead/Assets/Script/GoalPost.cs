@@ -47,13 +47,16 @@ public class GoalPost : MonoBehaviour
             case PlayerType.Player:
             {
                     FindObjectOfType<RamailoGamesScoreManager>().AddScore(1f);
+                    FindObjectOfType<DanceGirl>().Dance();
+                    
                break;
             }
 
             case PlayerType.Cpu:
             {
                     FindObjectOfType<BotScoreManager>().AddBotScore(1f);
-               break;
+                    FindObjectOfType<DanceGirl>().Dance();
+                    break;
             }
         }
     }

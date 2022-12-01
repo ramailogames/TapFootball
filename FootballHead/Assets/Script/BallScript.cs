@@ -38,47 +38,69 @@ public class BallScript : MonoBehaviour
         Instantiate(goalVfx, transform.position, Quaternion.identity);
     }
 
-
-    public void TakeKick(int direction)
+    
+    public void TakeKick(int direction, bool inAir)
     {
+
+
         rb.velocity = Vector2.zero;
+        //Bot ----------------------------------
 
+        //right
         AudioManagerCS.instance.Play("kickball");
-        if(direction == 1)
+            if (direction == 1)
+            {
+
+                //right
+                int indexR = Random.Range(1, 3);
+
+                if (indexR == 1)
+                {
+                    rb.AddForce(Vector2.right * (kickForce) / 1.4f);
+                    //rb.AddForce(Vector2.up * kickForce / 4f);
+                }
+
+                if (indexR == 2)
+                {
+                    rb.AddForce(Vector2.right * (kickForce) / 1.4f);
+                    rb.AddForce(Vector2.up * (kickForce) / 3f);
+                }
+
+                return;
+            }
+
+        //Player ----------------------------------
+
+        //left
+
+        if (inAir)
         {
-
-            //right
-            int indexR = Random.Range(1, 3);
-
-            if(indexR == 1)
-            {
-                rb.AddForce(Vector2.right * kickForce);
-            }
-
-            if(indexR == 2)
-            {
-                rb.AddForce(Vector2.right * kickForce);
-                rb.AddForce(Vector2.up * kickForce/2);
-            }
-       
-
-          
+            rb.AddForce(Vector2.left * (kickForce + 350f));
+            rb.AddForce(Vector2.up * kickForce / 3.5f);
             return;
         }
 
-        //left
-        int indexL = Random.Range(1, 3);
 
-        if (indexL == 1)
-        {
-            rb.AddForce(Vector2.left * kickForce);
-        }
+            int indexL = Random.Range(1, 3);
 
-        if (indexL == 2)
-        {
-            rb.AddForce(Vector2.left * kickForce);
-            rb.AddForce(Vector2.up * kickForce / 2);
-        }
+            if (indexL == 1)
+            {
+                rb.AddForce(Vector2.left * kickForce);
+                //rb.AddForce((GameManager.instance.playerGoalTarget.position - transform.position) * 300f);
+            }
+
+            if (indexL == 2)
+            {
+                //rb.AddForce((GameManager.instance.playerGoalTarget.position - transform.position) * 300f);
+                rb.AddForce(Vector2.left * kickForce);
+                rb.AddForce(Vector2.up * kickForce / 1.3f);
+            }
+
+           
+        
+
+      
+
     }
 
     void StartKickOff()
