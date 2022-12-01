@@ -11,8 +11,9 @@ public class GameManager : MonoBehaviour
 
     public float maxTime;
     float currentTime;
-    public bool gameOver = false;
+    [HideInInspector]public bool gameOver = false;
     [SerializeField] GameObject gameoverView;
+    [SerializeField] TextMeshProUGUI timerText;
     private void Awake()
     {
         instance = this;
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour
         }
 
         currentTime -= Time.deltaTime;
-
+        timerText.text = currentTime.ToString("0") + "s";
         if(currentTime<= 0)
         {
             gameOver = true;
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
     public void Gameover()
     {
         gameoverView.SetActive(true);
+        Destroy(FindObjectOfType<BallScript>().gameObject);
     }
 
 
