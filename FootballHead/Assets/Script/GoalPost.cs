@@ -46,7 +46,8 @@ public class GoalPost : MonoBehaviour
         {
             case PlayerType.Player:
             {
-                    FindObjectOfType<RamailoGamesScoreManager>().AddScore(1f);
+                    //  FindObjectOfType<RamailoGamesScoreManager>().AddScore(1f);
+                    FindObjectOfType<playerscore>().AddScore();
                     FindObjectOfType<DanceGirl>().Dance();
                     
                break;
