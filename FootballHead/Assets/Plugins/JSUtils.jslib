@@ -2,7 +2,12 @@
 {
 	openAd: function() // Called by unity from Create Ad Button
 	{
-		window.focus();
+		
+		// call function in index
+		 adBreak({
+        	type: 'next',  // ad shows at start of next level
+			name: 'restart-game',
+      		});
 	},
 
 	focusReturn: function() // Called by unity from Create Ad Button
