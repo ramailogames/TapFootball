@@ -2089,10 +2089,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isStaging: 0
-  tournament_id: 0
-  gameid: 0
-  playerHashValue: 
-  isTournament: 0
   fetechedAttempts: 0
   fetechedPlayAndWinLeadingScore: 0
   hasFetechedAttempts: 0
@@ -2695,7 +2691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -42.633087, y: -32.201416}
+  m_AnchoredPosition: {x: -42.633087, y: -39}
   m_SizeDelta: {x: 209.4275, y: 76.9351}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &613135275
@@ -2720,8 +2716,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c36390d2cd038e47923bfd2fa208639, type: 2}
-  m_sharedMaterial: {fileID: -6115919907339432208, guid: 9c36390d2cd038e47923bfd2fa208639, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 20b64b867c5bb864ba0202eb408edf4f, type: 2}
+  m_sharedMaterial: {fileID: 6692216405721331178, guid: 20b64b867c5bb864ba0202eb408edf4f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2957,7 +2953,7 @@ RectTransform:
   m_GameObject: {fileID: 673719480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1053330154}
@@ -4597,7 +4593,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43, y: 29}
+  m_AnchoredPosition: {x: 43, y: 32}
   m_SizeDelta: {x: 209.4275, y: 36.5322}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &870875398
@@ -4647,8 +4643,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5555,7 +5551,7 @@ RectTransform:
   m_GameObject: {fileID: 1001892782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 870875397}
@@ -5725,7 +5721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -42.633087, y: 28.2822}
+  m_AnchoredPosition: {x: -42.633087, y: 31.282196}
   m_SizeDelta: {x: 209.4275, y: 36.5322}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1053330155
@@ -5775,8 +5771,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6680,9 +6676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9d73bbb923a16438f2b0bf96eaa835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUrl: 
-  blockUI: {fileID: 0}
-  url: https://clients.redtailfox.co/sampanagames/license.txt
 --- !u!4 &1438387589
 Transform:
   m_ObjectHideFlags: 0
@@ -6911,7 +6904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 44, y: -30}
+  m_AnchoredPosition: {x: 44, y: -39}
   m_SizeDelta: {x: 209.4275, y: 76.9351}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1547230247
@@ -6936,8 +6929,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c36390d2cd038e47923bfd2fa208639, type: 2}
-  m_sharedMaterial: {fileID: -6115919907339432208, guid: 9c36390d2cd038e47923bfd2fa208639, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 20b64b867c5bb864ba0202eb408edf4f, type: 2}
+  m_sharedMaterial: {fileID: 6692216405721331178, guid: 20b64b867c5bb864ba0202eb408edf4f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
